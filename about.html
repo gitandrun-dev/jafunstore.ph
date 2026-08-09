@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about JaFUN Store - how we source authentic Japanese products and deliver them to the Philippines.">
+    <title>About Us - JaFUN Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FAF9F6',
+                        navy: '#1B2A4A',
+                        coral: '#E8654A',
+                        'coral-light': '#FF8A70',
+                        charcoal: '#2D2D2D',
+                        'warm-gray': '#F5F3F0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-charcoal font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="inline-flex items-center gap-0.5"><span class="text-2xl font-bold tracking-tight"><span class="text-navy">Ja</span><span class="text-coral">FUN</span></span><span class="text-xl font-semibold text-navy tracking-tight">Store<sup class="text-[9px] font-medium text-charcoal/50 ml-0.5">PH</sup></span></span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-charcoal/70 hover:text-navy transition-colors link-underline">Home</a>
+                    <a href="products.html" class="text-charcoal/70 hover:text-navy transition-colors link-underline">Products</a>
+                    <a href="about.html" class="text-navy font-medium border-b-2 border-coral pb-1">About</a>
+                    <a href="contact.html" class="text-charcoal/70 hover:text-navy transition-colors link-underline">Contact</a>
+                    <a href="cart.html" class="relative p-2 hover:bg-warm-gray rounded-full transition-colors">
+                        <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+                        </svg>
+                        <span class="cart-badge hidden absolute -top-1 -right-1 bg-coral text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium">0</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-3 md:hidden">
+                    <a href="cart.html" class="relative p-2">
+                        <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+                        </svg>
+                        <span class="cart-badge hidden absolute -top-1 -right-1 bg-coral text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium">0</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="p-2" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block text-charcoal/70">Home</a>
+                <a href="products.html" class="block text-charcoal/70">Products</a>
+                <a href="about.html" class="block text-navy font-medium">About</a>
+                <a href="contact.html" class="block text-charcoal/70">Contact</a>
+                <a href="cart.html" class="block text-coral font-medium">Cart</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-24 pb-8 md:pt-32 md:pb-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-3xl md:text-4xl font-bold text-navy mb-2">About JaFUN Store</h1>
+            <p class="text-charcoal/60 text-lg">Bridging Japan and the Philippines, one product at a time.</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="pb-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-navy">Our Story</h2>
+                    <p class="text-charcoal/70 leading-relaxed">
+                        JaFUN Store started from a simple love for Japanese products and the realization that many Filipinos share the same appreciation. From unique snacks to quality skincare, Japan offers some of the best everyday goods in the world — but getting them here wasn't always easy or affordable.
+                    </p>
+                    <p class="text-charcoal/70 leading-relaxed">
+                        We set out to change that. By building direct sourcing relationships and keeping our operations lean, we bring you authentic Japanese products at fair prices, without the guesswork of ordering overseas yourself.
+                    </p>
+                    <p class="text-charcoal/70 leading-relaxed">
+                        Whether you're a longtime fan of Japanese culture or just discovering it, we're here to make quality Japanese goods accessible to every Filipino home.
+                    </p>
+                </div>
+                <div class="bg-warm-gray rounded-3xl p-8 aspect-square flex items-center justify-center">
+                    <div class="text-center space-y-4">
+                        <span class="text-8xl">🇯🇵 🤝 🇵🇭</span>
+                        <p class="text-charcoal/50 text-sm">Image placeholder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy mb-4">How It Works</h2>
+                <p class="text-charcoal/60 max-w-2xl mx-auto">Getting your favorite Japanese products is simple. Here's the process from browsing to unboxing.</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center space-y-4">
+                    <div class="relative">
+                        <div class="bg-coral/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-3xl font-bold text-coral">1</span>
+                        </div>
+                        <div class="hidden md:block absolute top-1/2 left-full w-full h-0.5 bg-gray-200 -translate-y-1/2"></div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-navy">Browse</h3>
+                    <p class="text-charcoal/60 text-sm">Check out our catalog or tell us what you're looking for. We update stock regularly.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="text-center space-y-4">
+                    <div class="relative">
+                        <div class="bg-coral/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-3xl font-bold text-coral">2</span>
+                        </div>
+                        <div class="hidden md:block absolute top-1/2 left-full w-full h-0.5 bg-gray-200 -translate-y-1/2"></div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-navy">Inquire</h3>
+                    <p class="text-charcoal/60 text-sm">Message us via Messenger, Viber, or WhatsApp. We'll confirm availability and total cost.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="text-center space-y-4">
+                    <div class="relative">
+                        <div class="bg-coral/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-3xl font-bold text-coral">3</span>
+                        </div>
+                        <div class="hidden md:block absolute top-1/2 left-full w-full h-0.5 bg-gray-200 -translate-y-1/2"></div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-navy">Pay</h3>
+                    <p class="text-charcoal/60 text-sm">Pay via GCash, bank transfer, or other local payment methods. Simple and secure.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="text-center space-y-4">
+                    <div>
+                        <div class="bg-coral/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-3xl font-bold text-coral">4</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-navy">Receive</h3>
+                    <p class="text-charcoal/60 text-sm">We ship to your door via trusted couriers. Track your package every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy mb-4">What Sets Us Apart</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-coral/10 rounded-xl p-3 flex-shrink-0">
+                            <svg class="w-6 h-6 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-navy text-lg mb-2">Direct Sourcing</h3>
+                            <p class="text-charcoal/60">We source products directly from Japanese retailers and distributors. No middlemen means better prices and guaranteed authenticity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-coral/10 rounded-xl p-3 flex-shrink-0">
+                            <svg class="w-6 h-6 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-navy text-lg mb-2">Fair Pricing</h3>
+                            <p class="text-charcoal/60">No surprise fees. We give you the full breakdown upfront — product cost, shipping, and handling. What you see is what you pay.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-coral/10 rounded-xl p-3 flex-shrink-0">
+                            <svg class="w-6 h-6 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-navy text-lg mb-2">Personal Service</h3>
+                            <p class="text-charcoal/60">You're not just a transaction. We chat with every customer personally and are happy to answer questions, recommend products, or fulfill special requests.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-coral/10 rounded-xl p-3 flex-shrink-0">
+                            <svg class="w-6 h-6 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-navy text-lg mb-2">Careful Packaging</h3>
+                            <p class="text-charcoal/60">Japanese products deserve Japanese-level care. Everything is packed securely to survive the journey from Japan to your doorstep.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy mb-4">Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center hover:bg-warm-gray/50 transition-colors" aria-expanded="false">
+                        <span class="font-medium text-navy pr-4">How long does shipping take?</span>
+                        <svg class="faq-icon w-5 h-5 text-charcoal/40 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-charcoal/60">Shipping typically takes 7-14 business days from Japan to the Philippines. Metro Manila deliveries are usually faster (7-10 days), while provincial areas may take a bit longer. We'll give you a tracking number so you can monitor your package.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center hover:bg-warm-gray/50 transition-colors" aria-expanded="false">
+                        <span class="font-medium text-navy pr-4">What payment methods do you accept?</span>
+                        <svg class="faq-icon w-5 h-5 text-charcoal/40 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-charcoal/60">We accept GCash, BPI/BDO bank transfer, and PayMaya. For larger orders, we can also arrange installment-style payments. All payment details are sent after you confirm your order.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center hover:bg-warm-gray/50 transition-colors" aria-expanded="false">
+                        <span class="font-medium text-navy pr-4">Are products authentic?</span>
+                        <svg class="faq-icon w-5 h-5 text-charcoal/40 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-charcoal/60">Yes, 100%. Every product we sell is purchased from legitimate Japanese retailers and drugstores. We never source from third-party resellers or grey markets. If you ever have concerns about a product's authenticity, we're happy to show you proof of purchase.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center hover:bg-warm-gray/50 transition-colors" aria-expanded="false">
+                        <span class="font-medium text-navy pr-4">Can I request a product that's not listed?</span>
+                        <svg class="faq-icon w-5 h-5 text-charcoal/40 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-charcoal/60">Absolutely! If there's a specific Japanese product you want, send us a message with the product name or a photo. We'll check availability and give you a quote including shipping. We love helping people find exactly what they're after.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center hover:bg-warm-gray/50 transition-colors" aria-expanded="false">
+                        <span class="font-medium text-navy pr-4">Do you ship outside Metro Manila?</span>
+                        <svg class="faq-icon w-5 h-5 text-charcoal/40 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-charcoal/60">Yes! We ship nationwide across the Philippines. Provincial shipping may take a few extra days and may have a slightly higher shipping fee depending on your location, but we deliver anywhere a courier can reach.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center hover:bg-warm-gray/50 transition-colors" aria-expanded="false">
+                        <span class="font-medium text-navy pr-4">What if my order arrives damaged?</span>
+                        <svg class="faq-icon w-5 h-5 text-charcoal/40 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-charcoal/60">We pack everything with care, but if something does arrive damaged, send us photos within 24 hours of receiving the package. We'll work out a replacement or refund — no questions asked. Your satisfaction matters to us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-navy mb-4">Have More Questions?</h2>
+            <p class="text-charcoal/60 text-lg mb-8">We're always happy to chat. Reach out anytime and we'll get back to you quickly.</p>
+            <a href="contact.html" class="bg-coral text-white px-8 py-3.5 rounded-full font-medium hover:bg-coral-light transition-colors inline-block">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <span class="inline-flex items-center gap-0.5"><span class="text-2xl font-bold tracking-tight"><span class="text-white">Ja</span><span class="text-coral">FUN</span></span><span class="text-xl font-semibold text-white tracking-tight">Store<sup class="text-[9px] font-medium text-white/50 ml-0.5">PH</sup></span></span>
+                    <p class="text-white/60 mt-3 max-w-md">Bringing the best of Japan to Filipino homes. Authentic products, honest prices, reliable delivery. jafunstore.ph</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-white/60">
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-white/60">
+                        <li><a href="#" class="hover:text-white transition-colors">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Viber</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-white/40 text-sm">
+                <p>&copy; 2026 JaFUN Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

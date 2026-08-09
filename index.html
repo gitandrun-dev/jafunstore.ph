@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Japanese products delivered to the Philippines. Snacks, beauty, lifestyle, and more. Shop at jafunstore.ph">
+    <title>JaFUN Store - Japanese Products for the Philippines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FAF9F6',
+                        navy: '#1B2A4A',
+                        coral: '#E8654A',
+                        'coral-light': '#FF8A70',
+                        charcoal: '#2D2D2D',
+                        'warm-gray': '#F5F3F0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-charcoal font-sans page-transition">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="inline-flex items-center gap-0.5"><span class="text-2xl font-bold tracking-tight"><span class="text-navy">Ja</span><span class="text-coral">FUN</span></span><span class="text-xl font-semibold text-navy tracking-tight">Store<sup class="text-[9px] font-medium text-charcoal/50 ml-0.5">PH</sup></span></span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-navy font-medium border-b-2 border-coral pb-1">Home</a>
+                    <a href="products.html" class="text-charcoal/70 hover:text-navy transition-colors link-underline">Products</a>
+                    <a href="about.html" class="text-charcoal/70 hover:text-navy transition-colors link-underline">About</a>
+                    <a href="contact.html" class="text-charcoal/70 hover:text-navy transition-colors link-underline">Contact</a>
+                    <a href="cart.html" class="relative p-2 hover:bg-warm-gray rounded-full transition-colors">
+                        <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+                        </svg>
+                        <span class="cart-badge hidden absolute -top-1 -right-1 bg-coral text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium">0</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-3 md:hidden">
+                    <a href="cart.html" class="relative p-2">
+                        <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+                        </svg>
+                        <span class="cart-badge hidden absolute -top-1 -right-1 bg-coral text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium">0</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="p-2" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block text-navy font-medium">Home</a>
+                <a href="products.html" class="block text-charcoal/70">Products</a>
+                <a href="about.html" class="block text-charcoal/70">About</a>
+                <a href="contact.html" class="block text-charcoal/70">Contact</a>
+                <a href="cart.html" class="block text-coral font-medium">Cart</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-10 md:pt-32 md:pb-24 px-4 hero-interactive overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="space-y-4 md:space-y-6 animate-fade-in">
+                    <span class="inline-block bg-coral/10 text-coral px-4 py-1.5 rounded-full text-sm font-medium animate-bounce-in" style="animation-delay: 0.3s">From Japan to Your Doorstep</span>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight">
+                        Premium Japanese Products for the
+                        <span class="text-coral">Philippines</span>
+                    </h1>
+                    <p class="text-base md:text-lg text-charcoal/70 max-w-lg">
+                        Authentic Japanese snacks, beauty products, lifestyle goods, and more — sourced and delivered straight to you.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
+                        <a href="products.html" class="bg-coral text-white px-6 md:px-8 py-3 md:py-3.5 rounded-full font-medium hover:bg-coral-light transition-all hover:shadow-lg hover:-translate-y-1 text-center add-to-cart-btn">
+                            Browse Products
+                        </a>
+                        <a href="about.html" class="border-2 border-navy text-navy px-6 md:px-8 py-3 md:py-3.5 rounded-full font-medium hover:bg-navy hover:text-white transition-all text-center magnetic-hover">
+                            How It Works
+                        </a>
+                    </div>
+                </div>
+                <div class="relative hero-image hidden md:block" style="transition: transform 0.3s ease-out;">
+                    <div class="bg-warm-gray rounded-3xl p-8 aspect-square flex items-center justify-center blob">
+                        <div class="text-center space-y-4">
+                            <span class="text-8xl animate-float">🇯🇵</span>
+                            <p class="text-charcoal/50 text-sm">Hero image placeholder</p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-lg p-4 animate-fade-in" style="animation-delay: 0.6s">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-green-100 rounded-full p-2">
+                                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Authentic & Verified</p>
+                                <p class="text-xs text-charcoal/50">Direct from Japan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg p-4 animate-fade-in" style="animation-delay: 0.8s">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-coral/10 rounded-full p-2">
+                                <span class="text-lg">🚀</span>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Fast Delivery</p>
+                                <p class="text-xs text-charcoal/50">7-14 days</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 scroll-reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Shop by Category</h2>
+                <p class="text-charcoal/60 max-w-2xl mx-auto">From delicious snacks to premium skincare, find the best of Japan in one place.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 stagger-children">
+                <a href="products.html#snacks" class="group">
+                    <div class="bg-warm-gray rounded-2xl p-6 text-center hover:shadow-lg transition-all tilt-hover">
+                        <span class="text-5xl block mb-4 group-hover:animate-wiggle">🍡</span>
+                        <h3 class="font-semibold text-navy group-hover:text-coral transition-colors">Snacks & Food</h3>
+                        <p class="text-sm text-charcoal/50 mt-1">Pocky, KitKat, Ramen & more</p>
+                    </div>
+                </a>
+                <a href="products.html#beauty" class="group">
+                    <div class="bg-warm-gray rounded-2xl p-6 text-center hover:shadow-lg transition-all tilt-hover">
+                        <span class="text-5xl block mb-4 group-hover:animate-wiggle">✨</span>
+                        <h3 class="font-semibold text-navy group-hover:text-coral transition-colors">Beauty & Skincare</h3>
+                        <p class="text-sm text-charcoal/50 mt-1">Shiseido, Canmake, DHC</p>
+                    </div>
+                </a>
+                <a href="products.html#household" class="group">
+                    <div class="bg-warm-gray rounded-2xl p-6 text-center hover:shadow-lg transition-all tilt-hover">
+                        <span class="text-5xl block mb-4 group-hover:animate-wiggle">🏠</span>
+                        <h3 class="font-semibold text-navy group-hover:text-coral transition-colors">Household</h3>
+                        <p class="text-sm text-charcoal/50 mt-1">Storage, cleaning, kitchen</p>
+                    </div>
+                </a>
+                <a href="products.html#stationery" class="group">
+                    <div class="bg-warm-gray rounded-2xl p-6 text-center hover:shadow-lg transition-all tilt-hover">
+                        <span class="text-5xl block mb-4 group-hover:animate-wiggle">✏️</span>
+                        <h3 class="font-semibold text-navy group-hover:text-coral transition-colors">Stationery</h3>
+                        <p class="text-sm text-charcoal/50 mt-1">Muji, Pilot, Zebra pens</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12 scroll-reveal">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy mb-2">Featured Products</h2>
+                    <p class="text-charcoal/60">Our most popular items this month</p>
+                </div>
+                <a href="products.html" class="hidden md:inline-flex items-center text-coral font-medium hover:text-coral-light transition-colors link-underline">
+                    View All
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 group">
+                    <a href="product-detail.html?id=kitkat-matcha" class="block">
+                        <div class="bg-warm-gray aspect-[4/3] flex items-center justify-center overflow-hidden">
+                            <span class="text-6xl product-emoji group-hover:scale-110 transition-transform duration-300">🍫</span>
+                        </div>
+                    </a>
+                    <div class="p-6">
+                        <span class="text-xs text-coral font-medium uppercase tracking-wide">Snacks</span>
+                        <a href="product-detail.html?id=kitkat-matcha">
+                            <h3 class="font-semibold text-navy mt-1 text-lg group-hover:text-coral transition-colors">KitKat Matcha Green Tea</h3>
+                        </a>
+                        <p class="text-charcoal/60 text-sm mt-2">Authentic Japanese KitKat with rich matcha flavor. Limited edition, 12 pieces per box.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xl font-bold text-navy">&#8369;450</span>
+                            <button data-add-to-cart="kitkat-matcha" class="flex items-center space-x-1 border-2 border-coral text-coral px-4 py-1.5 rounded-full text-sm font-medium hover:bg-coral hover:text-white transition-all add-to-cart-btn">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                </svg>
+                                <span>Add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 group">
+                    <a href="product-detail.html?id=hada-labo" class="block">
+                        <div class="bg-warm-gray aspect-[4/3] flex items-center justify-center overflow-hidden">
+                            <span class="text-6xl product-emoji group-hover:scale-110 transition-transform duration-300">🧴</span>
+                        </div>
+                    </a>
+                    <div class="p-6">
+                        <span class="text-xs text-coral font-medium uppercase tracking-wide">Beauty</span>
+                        <a href="product-detail.html?id=hada-labo">
+                            <h3 class="font-semibold text-navy mt-1 text-lg group-hover:text-coral transition-colors">Hada Labo Hydrating Lotion</h3>
+                        </a>
+                        <p class="text-charcoal/60 text-sm mt-2">Hyaluronic acid moisturizing lotion for deep hydration. 170ml bottle.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xl font-bold text-navy">&#8369;680</span>
+                            <button data-add-to-cart="hada-labo" class="flex items-center space-x-1 border-2 border-coral text-coral px-4 py-1.5 rounded-full text-sm font-medium hover:bg-coral hover:text-white transition-all add-to-cart-btn">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                </svg>
+                                <span>Add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 group">
+                    <a href="product-detail.html?id=zebra-sarasa" class="block">
+                        <div class="bg-warm-gray aspect-[4/3] flex items-center justify-center overflow-hidden">
+                            <span class="text-6xl product-emoji group-hover:scale-110 transition-transform duration-300">🖊️</span>
+                        </div>
+                    </a>
+                    <div class="p-6">
+                        <span class="text-xs text-coral font-medium uppercase tracking-wide">Stationery</span>
+                        <a href="product-detail.html?id=zebra-sarasa">
+                            <h3 class="font-semibold text-navy mt-1 text-lg group-hover:text-coral transition-colors">Zebra Sarasa Gel Pen Set</h3>
+                        </a>
+                        <p class="text-charcoal/60 text-sm mt-2">Smooth-writing gel ink pens in 10 vibrant colors. 0.5mm tip for clean lines.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xl font-bold text-navy">&#8369;520</span>
+                            <button data-add-to-cart="zebra-sarasa" class="flex items-center space-x-1 border-2 border-coral text-coral px-4 py-1.5 rounded-full text-sm font-medium hover:bg-coral hover:text-white transition-all add-to-cart-btn">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                </svg>
+                                <span>Add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8 md:hidden">
+                <a href="products.html" class="inline-flex items-center text-coral font-medium">
+                    View All Products
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust / Why Us Section -->
+    <section class="py-16 px-4 bg-navy text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 scroll-reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Shop With Us?</h2>
+                <p class="text-white/70 max-w-2xl mx-auto">We make it easy to get authentic Japanese products without the hassle.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 stagger-children">
+                <div class="text-center space-y-4 group">
+                    <div class="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-coral/20 transition-colors group-hover:scale-110 transform duration-300">
+                        <svg class="w-8 h-8 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold">100% Authentic</h3>
+                    <p class="text-white/60">Every product is sourced directly from Japan. No fakes, no knockoffs.</p>
+                </div>
+                <div class="text-center space-y-4 group">
+                    <div class="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-coral/20 transition-colors group-hover:scale-110 transform duration-300">
+                        <svg class="w-8 h-8 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold">Fast Shipping</h3>
+                    <p class="text-white/60">We ship directly to Metro Manila and major cities across the Philippines.</p>
+                </div>
+                <div class="text-center space-y-4 group">
+                    <div class="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-coral/20 transition-colors group-hover:scale-110 transform duration-300">
+                        <svg class="w-8 h-8 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold">Easy Ordering</h3>
+                    <p class="text-white/60">Add to cart and send your order via Messenger, Viber, or WhatsApp. Simple.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center scroll-reveal">
+            <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Ready to Order?</h2>
+            <p class="text-charcoal/60 text-lg mb-8 max-w-2xl mx-auto">
+                Browse our catalog, add items to your cart, and send us your order. We'll handle the rest — from sourcing to delivery.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="products.html" class="bg-coral text-white px-8 py-3.5 rounded-full font-medium hover:bg-coral-light transition-all hover:shadow-lg hover:-translate-y-1 magnetic-hover">
+                    Browse Products
+                </a>
+                <a href="contact.html" class="border-2 border-navy text-navy px-8 py-3.5 rounded-full font-medium hover:bg-navy hover:text-white transition-colors magnetic-hover">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <span class="inline-flex items-center gap-0.5"><span class="text-2xl font-bold tracking-tight"><span class="text-white">Ja</span><span class="text-coral">FUN</span></span><span class="text-xl font-semibold text-white tracking-tight">Store<sup class="text-[9px] font-medium text-white/50 ml-0.5">PH</sup></span></span>
+                    <p class="text-white/60 mt-3 max-w-md">Bringing the best of Japan to Filipino homes. Authentic products, honest prices, reliable delivery. jafunstore.ph</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-white/60">
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="cart.html" class="hover:text-white transition-colors">Cart</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-white/60">
+                        <li><a href="#" class="hover:text-white transition-colors">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Viber</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-white/40 text-sm">
+                <p>&copy; 2026 JaFUN Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

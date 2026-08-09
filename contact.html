@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with JaFUN Store - message us on Messenger, Viber, or WhatsApp to order Japanese products.">
+    <title>Contact Us - JaFUN Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FAF9F6',
+                        navy: '#1B2A4A',
+                        coral: '#E8654A',
+                        'coral-light': '#FF8A70',
+                        charcoal: '#2D2D2D',
+                        'warm-gray': '#F5F3F0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-charcoal font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="inline-flex items-center gap-0.5"><span class="text-2xl font-bold tracking-tight"><span class="text-navy">Ja</span><span class="text-coral">FUN</span></span><span class="text-xl font-semibold text-navy tracking-tight">Store<sup class="text-[9px] font-medium text-charcoal/50 ml-0.5">PH</sup></span></span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-charcoal/70 hover:text-navy transition-colors link-underline">Home</a>
+                    <a href="products.html" class="text-charcoal/70 hover:text-navy transition-colors link-underline">Products</a>
+                    <a href="about.html" class="text-charcoal/70 hover:text-navy transition-colors link-underline">About</a>
+                    <a href="contact.html" class="text-navy font-medium border-b-2 border-coral pb-1">Contact</a>
+                    <a href="cart.html" class="relative p-2 hover:bg-warm-gray rounded-full transition-colors">
+                        <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+                        </svg>
+                        <span class="cart-badge hidden absolute -top-1 -right-1 bg-coral text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium">0</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-3 md:hidden">
+                    <a href="cart.html" class="relative p-2">
+                        <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+                        </svg>
+                        <span class="cart-badge hidden absolute -top-1 -right-1 bg-coral text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium">0</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="p-2" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block text-charcoal/70">Home</a>
+                <a href="products.html" class="block text-charcoal/70">Products</a>
+                <a href="about.html" class="block text-charcoal/70">About</a>
+                <a href="contact.html" class="block text-navy font-medium">Contact</a>
+                <a href="cart.html" class="block text-coral font-medium">Cart</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-24 pb-8 md:pt-32 md:pb-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-3xl md:text-4xl font-bold text-navy mb-2">Get in Touch</h1>
+            <p class="text-charcoal/60 text-lg">Ready to order? Have a question? We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="pb-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12">
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <h2 class="text-xl font-semibold text-navy mb-6">Send Us a Message</h2>
+                    <form id="contact-form" class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-charcoal/70 mb-1.5">Your Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-coral focus:ring-2 focus:ring-coral/20 outline-none transition-all"
+                                    placeholder="Juan Dela Cruz">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-charcoal/70 mb-1.5">Email Address</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-coral focus:ring-2 focus:ring-coral/20 outline-none transition-all"
+                                    placeholder="juan@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-charcoal/70 mb-1.5">Subject</label>
+                            <select id="subject" name="subject"
+                                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-coral focus:ring-2 focus:ring-coral/20 outline-none transition-all text-charcoal/70">
+                                <option value="">Select a topic...</option>
+                                <option value="order">I want to place an order</option>
+                                <option value="inquiry">Product inquiry</option>
+                                <option value="request">Request a specific product</option>
+                                <option value="status">Order status / tracking</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-charcoal/70 mb-1.5">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-coral focus:ring-2 focus:ring-coral/20 outline-none transition-all resize-none"
+                                placeholder="Tell us what products you're interested in, or ask us anything..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-coral text-white py-3.5 rounded-xl font-medium hover:bg-coral-light transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                    <!-- Success Message (hidden by default) -->
+                    <div id="form-success" class="hidden text-center py-8">
+                        <div class="bg-green-50 rounded-xl p-6">
+                            <svg class="w-12 h-12 text-green-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <h3 class="text-lg font-semibold text-green-800 mb-1">Message Sent!</h3>
+                            <p class="text-green-600 text-sm">We'll get back to you within 24 hours. You can also reach us directly through the messaging apps below.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Info & Messaging -->
+                <div class="space-y-8">
+                    <!-- Quick Message Options -->
+                    <div>
+                        <h2 class="text-xl font-semibold text-navy mb-4">Prefer to Chat?</h2>
+                        <p class="text-charcoal/60 mb-6">For faster responses, message us directly on your preferred platform. We typically reply within 1-2 hours during business hours.</p>
+                        <div class="space-y-4">
+                            <!-- Messenger -->
+                            <a href="#" class="flex items-center space-x-4 bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 group">
+                                <div class="bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.906 1.445 5.493 3.708 7.19V22l3.427-1.88c.915.253 1.886.39 2.865.39 5.523 0 10-4.145 10-9.243S17.523 2 12 2zm1.067 12.43l-2.545-2.714-4.968 2.714 5.467-5.804 2.608 2.714 4.905-2.714-5.467 5.804z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-medium text-navy group-hover:text-coral transition-colors">Facebook Messenger</h3>
+                                    <p class="text-sm text-charcoal/50">@JaFUNStore</p>
+                                </div>
+                                <svg class="w-5 h-5 text-charcoal/30 group-hover:text-coral transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                            <!-- Viber -->
+                            <a href="#" class="flex items-center space-x-4 bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 group">
+                                <div class="bg-purple-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M11.4 0C9.473.028 5.333.344 3.02 2.467 1.302 4.187.6 6.7.52 9.867c-.08 3.167-.18 9.107 5.52 10.747h.005l-.005 2.453s-.037.987.613 1.187c.778.24 1.237-.5 1.983-1.3.41-.44.973-1.087 1.397-1.58 3.85.327 6.813-.413 7.153-.527.787-.26 5.233-.82 5.96-6.693.75-6.047-.353-9.867-2.347-11.593C19.187.947 15.553.027 11.4 0zm.267 1.84c3.707.027 6.86.727 8.393 2.12 1.66 1.44 2.633 4.867 1.98 10.04-.6 4.827-4.093 5.327-4.76 5.547-.28.093-2.88.733-6.153.533 0 0-2.437 2.94-3.2 3.72-.12.12-.26.173-.353.147-.133-.04-.167-.2-.167-.427l.02-4.033c-4.88-1.393-4.593-6.387-4.527-9.147.067-2.76.627-4.88 2.093-6.34C6.507 2.507 8.673 1.853 11.667 1.84z"/>
+                                        <path d="M11.653 4.28c-.2 0-.2.313 0 .32 1.833.067 3.367.72 4.42 1.86.953 1.04 1.473 2.413 1.533 4.053 0 .213.333.2.327 0-.067-1.78-.633-3.267-1.68-4.4-1.147-1.24-2.813-1.96-4.793-2.027h.193v.193zm-.34 1.473c-.193-.013-.22.293-.027.32 2.413.32 3.893 1.773 4.08 4.293.013.2.333.187.32-.013-.2-2.747-1.88-4.307-4.373-4.6zm.073 2.453c-.56 0-.987.493-1.013.587-.52.327-.773.96-.36 1.72.767 1.413 1.56 2.08 2.96 3.387.773.72 2.167 1.567 3.04 1.873l.02.007c.56.2 1.013.06 1.327-.36.28-.38.293-.853.047-1.147l-.92-.9c-.307-.287-.713-.267-1.007.02l-.427.42c-.173.16-.44.14-.44.14l-.013.007c-1.587-.38-3-1.713-3.307-2.053 0 0-.027-.253.133-.427l.4-.447c.267-.307.273-.713-.02-1.007l-.88-.933c-.147-.16-.34-.24-.54-.24z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-medium text-navy group-hover:text-coral transition-colors">Viber</h3>
+                                    <p class="text-sm text-charcoal/50">+63 917 XXX XXXX</p>
+                                </div>
+                                <svg class="w-5 h-5 text-charcoal/30 group-hover:text-coral transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                            <!-- WhatsApp -->
+                            <a href="#" class="flex items-center space-x-4 bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 group">
+                                <div class="bg-green-500 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-medium text-navy group-hover:text-coral transition-colors">WhatsApp</h3>
+                                    <p class="text-sm text-charcoal/50">+63 917 XXX XXXX</p>
+                                </div>
+                                <svg class="w-5 h-5 text-charcoal/30 group-hover:text-coral transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                            <!-- Email -->
+                            <a href="mailto:hello@jafunstore.ph" class="flex items-center space-x-4 bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 group">
+                                <div class="bg-coral w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-medium text-navy group-hover:text-coral transition-colors">Email</h3>
+                                    <p class="text-sm text-charcoal/50">hello@jafunstore.ph</p>
+                                </div>
+                                <svg class="w-5 h-5 text-charcoal/30 group-hover:text-coral transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h3 class="font-semibold text-navy mb-4">Response Hours</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-charcoal/60">Monday - Friday</span>
+                                <span class="font-medium text-navy">9:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-charcoal/60">Saturday</span>
+                                <span class="font-medium text-navy">10:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-charcoal/60">Sunday</span>
+                                <span class="font-medium text-navy">12:00 PM - 5:00 PM</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-charcoal/50 mt-4">* Philippine Standard Time (PST/GMT+8). Messages received outside these hours will be replied to the next business day.</p>
+                    </div>
+
+                    <!-- Note -->
+                    <div class="bg-coral/5 border border-coral/20 rounded-2xl p-6">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-coral flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-medium text-navy mb-1">Tip for Faster Orders</h4>
+                                <p class="text-sm text-charcoal/60">When messaging us about a product, include the product name and quantity. If you saw it on our site, just send us the link or a screenshot. This helps us process your inquiry faster!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <span class="inline-flex items-center gap-0.5"><span class="text-2xl font-bold tracking-tight"><span class="text-white">Ja</span><span class="text-coral">FUN</span></span><span class="text-xl font-semibold text-white tracking-tight">Store<sup class="text-[9px] font-medium text-white/50 ml-0.5">PH</sup></span></span>
+                    <p class="text-white/60 mt-3 max-w-md">Bringing the best of Japan to Filipino homes. Authentic products, honest prices, reliable delivery. jafunstore.ph</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-white/60">
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-white/60">
+                        <li><a href="#" class="hover:text-white transition-colors">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Viber</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-white/40 text-sm">
+                <p>&copy; 2026 JaFUN Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
